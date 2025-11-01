@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+
+URL="https://pokeapi.co/api/v2/pokemon/pikachu"
+
+if curl -f -s "$URL" -o data.json; then
+    
+
+    :
+else
+    
+    echo "Failed to retrieve data for Pikachu"> errors.txt
+
+fi
