@@ -1,0 +1,8 @@
+#!/bin/bash
+
+jq -r '[.name, .types[0].type.name, .weight, .height] | @tsv' data.json | \
+
+awk '{ printf "%s is of type %s, weighs %skg, and is %sm tall.", $1, $2, $3/10, $4/10 }' | \
+
+
+sed 's/pikachu/Pikachu/' | sed 's/electric/Electric/'
